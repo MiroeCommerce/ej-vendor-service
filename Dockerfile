@@ -27,7 +27,7 @@ COPY . .
 RUN chmod +x ./gradlew
 
 # CORRECTED: Execute the build command for the project in the current directory.
-RUN ./gradlew assemble -x test --stacktrace
+RUN ./gradlew bootJar -x test --stacktrace
 
 
 # --- STAGE 2: The Final Runtime Environment ---

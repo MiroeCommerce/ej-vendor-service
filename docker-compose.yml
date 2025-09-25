@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  product-service:
+    build: .
+    container_name: shipping-service
+    ports:
+      - "8008:8008"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/e_database
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: admin123
+      SPRING_DATASOURCE_DRIVER_CLASS_NAME: org.postgresql.Driver
+      SPRING_JPA_HIBERNATE_DDL_AUTO: none
+    depends_on: []
